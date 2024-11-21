@@ -26,18 +26,15 @@ module arbiter (
  
 
     integer i;
-     
-
-
-    // State encoding
+    
     parameter IDLE = 2'b00;
     parameter PROC_REQ = 2'b01;
     parameter SNOOP_REQ = 2'b10;
     parameter MEM_REQ = 2'b11;
 
-    // FIFO instance for storing granted requests
+    
     fifo f1 (
-        .data_in(fifo_data_in), // Update if needed to write appropriate data based on the state
+        .data_in(fifo_data_in), 
         .rst(rst),
         .wr_en(wr_en),
         .rd_en(rd_en),
@@ -47,7 +44,7 @@ module arbiter (
         .fifo_counter(fifo_counter)
     );
 
-    // Clock generation (1ns period for testing purposes)
+    
     initial begin
         clk = 0;
         forever #1 clk = ~clk;
@@ -147,7 +144,7 @@ always @(*) begin
             PROC_REQ: begin
                 for (i = 0; i < 4; i = i + 1) begin
                     if (Com_Bus_Req_proc[i]) begin
-                        fifo_data_in = {PROC_REQ_TYPE, i[1:0]}; // Encode processor ID (last 2 bits)
+                        fifo_data_in = {PROC_REQ_TYPE, i[1:0]}; 
                         break;
                     end
                 end
@@ -155,12 +152,12 @@ always @(*) begin
             SNOOP_REQ: begin
                 for (i = 0; i < 4; i = i + 1) begin
                     if (Com_Bus_Req_snoop[i]) begin
-                        fifo_data_in = {SNOOP_REQ_TYPE, i[1:0]}; // Encode snoop ID (last 2 bits)
+                        fifo_data_in = {SNOOP_REQ_TYPE, i[1:0]}; 
                         break;
                     end
                 end
             end
-            MEM_REQ: fifo_data_in = {MEM_REQ_TYPE, 2'b00}; // Encode memory request type (fixed ID)
+            MEM_REQ: fifo_data_in = {MEM_REQ_TYPE, 2'b00}; 
             default: fifo_data_in = 4'b0000;
         endcase
     end

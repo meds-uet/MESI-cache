@@ -21,17 +21,17 @@ module arbiter_tb;
         //.fifo_data_in(fifo_data_in) // Added output for monitoring
     );
 
-    // Clock generation
+    
     reg clk;
     always begin
-        #5 clk = ~clk;  // 10ns clock period
+        #5 clk = ~clk;  
     end
 
     // Initial setup
     initial begin
         clk = 0;
         rst = 1;
-        #10 rst = 0;    // Release reset after 10ns
+        #10 rst = 0;    
 
         // Test cases
         test_case_1;
@@ -40,7 +40,7 @@ module arbiter_tb;
         test_case_4;
         test_case_5;
 
-        #50 $stop;      // Stop the simulation
+        #50 $stop;      
     end
 
     // Task for each test case
@@ -67,7 +67,7 @@ module arbiter_tb;
         Com_Bus_Req_snoop = 4'b0000;
         #20
         Com_Bus_Req_proc = 4'b0000;   // Clear request
-          // Clear request
+        
         #10;
     endtask
 
@@ -83,8 +83,7 @@ module arbiter_tb;
     #30
     Com_Bus_Req_snoop = 4'b0000; 
     #20
-    Com_Bus_Req_proc = 4'b0000; 
-          // Clear request 
+    Com_Bus_Req_proc = 4'b0000; // Clear request 
     #10;
     endtask
 
