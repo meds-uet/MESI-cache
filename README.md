@@ -17,7 +17,7 @@ The system consists of the following components:
 
 ### Block Diagram
 
-[View Block Diagram](Block_Diagram)
+[View Block Diagram](Block_Diagram.png)
 
 
 ## Cache Policies
