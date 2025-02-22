@@ -17,7 +17,8 @@ The system consists of the following components:
 
 ### Block Diagram
 
-*(The following image is located at `E:\MESI-cache\MESI-cache\Final_Chap_7.drawio`)*
+[View Block Diagram](Block_Diagram)
+
 
 ## Cache Policies
 
