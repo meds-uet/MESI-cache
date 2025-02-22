@@ -1,0 +1,8 @@
+  CREATE_STREAM @0 {NAME:reset_seq_0 T:Transactions SCOPE:uvm_test_top.env.agnt.seqr STREAM:1173}
+  CREATE_STREAM @0 {NAME:reset_seq_1 T:Transactions SCOPE:uvm_test_top.env.agnt1.seqr1 STREAM:1182}
+  CREATE_STREAM @0 {NAME:reset_seq_2 T:Transactions SCOPE:uvm_test_top.env.agnt2.seqr2 STREAM:1191}
+  CREATE_STREAM @0 {NAME:reset_seq_3 T:Transactions SCOPE:uvm_test_top.env.agnt3.seqr3 STREAM:1200}
+  CREATE_STREAM @15 {NAME:test_seq_0 T:Transactions SCOPE:uvm_test_top.env.agnt.seqr STREAM:1346}
+  CREATE_STREAM @15 {NAME:test_seq_1 T:Transactions SCOPE:uvm_test_top.env.agnt1.seqr1 STREAM:1354}
+  CREATE_STREAM @15 {NAME:test_seq_2 T:Transactions SCOPE:uvm_test_top.env.agnt2.seqr2 STREAM:1362}
+  CREATE_STREAM @15 {NAME:test_seq_3 T:Transactions SCOPE:uvm_test_top.env.agnt3.seqr3 STREAM:1370}
