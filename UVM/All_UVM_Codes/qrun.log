@@ -1,0 +1,534 @@
+QuestaSim-64 qrun 2024.3_1 Utility 2024.10 Oct 17 2024
+Start time: 09:46:22 on Feb 22,2025
+qrun -batch -access=rw+/. -uvmhome uvm-1.2 -timescale 1ns/1ns -mfcu design.sv testbench.sv -voptargs="+acc=npr" -do " run -all; exit" 
+Creating library 'qrun.out/work'.
+Mapping library 'mtiUvm' to 'qrun.out/work'.
+QuestaSim-64 vlog 2024.3_1 Compiler 2024.10 Oct 17 2024
+Start time: 09:46:23 on Feb 22,2025
+vlog -timescale 1ns/1ns -mfcu -ccflags "-Wno-missing-declarations" -ccflags "-Wno-maybe-uninitialized" -ccflags "-Wno-return-type" -ccflags "-DQUESTA" /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_dpi.cc /usr/share/questa/questasim/verilog_src/uvm-1.2/src/uvm_pkg.sv /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv design.sv testbench.sv -work qrun.out/work "+incdir+/usr/share/questa/questasim/verilog_src/uvm-1.2/src" -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+-- Compiling package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling package questa_uvm_pkg
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+** Warning: ** while parsing file included at design.sv(1)
+** at Cache_Controller0.sv(43): (vlog-13314) Defaulting port 'inputs' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(2)
+** at Cache_Controller1.sv(43): (vlog-13314) Defaulting port 'inputs1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(3)
+** at Cache_Controller2.sv(43): (vlog-13314) Defaulting port 'inputs2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(4)
+** at Cache_Controller3.sv(43): (vlog-13314) Defaulting port 'inputs3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(5)
+** at CCU.sv(61): (vlog-13314) Defaulting port 'ccu_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(6)
+** at L2_cache.sv(47): (vlog-13314) Defaulting port 'l2_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(7)
+** at fifo.sv(30): (vlog-13314) Defaulting port 'fifo_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: ** while parsing file included at design.sv(8)
+** at arbiter.sv(22): (vlog-13314) Defaulting port 'arbiter_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: design.sv(15): (vlog-13314) Defaulting port 'pr_addr' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: design.sv(16): (vlog-13314) Defaulting port 'pr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package uvm_pkg_sv_unit
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+** Warning: sequence.sv(26): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: sequence.sv(58): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling module Cache_Controller_0
+** Warning: Cache_Controller0.sv(43): (vlog-13314) Defaulting port 'inputs' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller0.sv(146): (vlog-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Compiling module Cache_Controller_1
+** Warning: Cache_Controller1.sv(43): (vlog-13314) Defaulting port 'inputs1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller1.sv(147): (vlog-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Compiling module Cache_Controller_2
+** Warning: Cache_Controller2.sv(43): (vlog-13314) Defaulting port 'inputs2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller2.sv(146): (vlog-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Compiling module Cache_Controller_3
+** Warning: Cache_Controller3.sv(43): (vlog-13314) Defaulting port 'inputs3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller3.sv(145): (vlog-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Compiling module CCU
+** Warning: CCU.sv(61): (vlog-13314) Defaulting port 'ccu_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module L2_cache
+** Warning: L2_cache.sv(47): (vlog-13314) Defaulting port 'l2_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: L2_cache.sv(117): (vlog-2182) 'cache' might be read before written in always_comb or always @* block.
+-- Compiling module fifo
+** Warning: fifo.sv(30): (vlog-13314) Defaulting port 'fifo_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module arbiter
+** Warning: arbiter.sv(22): (vlog-13314) Defaulting port 'arbiter_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module top_module
+** Warning: design.sv(15): (vlog-13314) Defaulting port 'pr_addr' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: design.sv(16): (vlog-13314) Defaulting port 'pr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling interface core_interface
+-- Compiling module top
+
+Top level modules:
+	top
+-- Compiling DPI/PLI C++ file /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_dpi.cc
+
+In file included from /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl.c:27,
+                 from /usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_dpi.cc:37:
+/usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl_questa.c: In function 'int uvm_is_vhdl_path(char*)':
+/usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl_questa.c:90:12: warning: 'char* strncpy(char*, const char*, size_t)' specified bound depends on the length of the source argument [-Wstringop-overflow=]
+   90 |     strncpy(path_copy, path, path_len);
+      |     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/share/questa/questasim/verilog_src/uvm-1.2/src/dpi/uvm_hdl_questa.c:72:20: note: length computed here
+   72 |   path_len = strlen(path);
+      |              ~~~~~~^~~~~~
+
+End time: 09:46:25 on Feb 22,2025, Elapsed time: 0:00:02
+Errors: 0, Warnings: 27
+QuestaSim-64 vopt 2024.3_1 Compiler 2024.10 Oct 17 2024
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+Start time: 09:46:25 on Feb 22,2025
+vopt -access=rw+/. -timescale 1ns/1ns -mfcu "+acc=npr" -findtoplevels qrun.out/work+1+ -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Loading package questa_uvm_pkg
+-- Loading interface core_interface
+-- Loading module top_module
+-- Loading module CCU
+-- Loading module Cache_Controller_0
+-- Loading module Cache_Controller_1
+-- Loading module Cache_Controller_2
+-- Loading module Cache_Controller_3
+-- Loading module arbiter
+-- Loading module fifo
+-- Loading module L2_cache
+Optimizing 15 design-units (inlining 0/11 module instances):
+-- Optimizing package uvm_pkg (uvm-1.2 Built-in)(fast)
+-- Optimizing package questa_uvm_pkg(fast)
+-- Optimizing package uvm_pkg_sv_unit(fast)
+** Warning: sequence.sv(26): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: sequence.sv(58): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Optimizing module top_module(fast)
+** Warning: design.sv(15): (vopt-13314) Defaulting port 'pr_addr' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: design.sv(16): (vopt-13314) Defaulting port 'pr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module CCU(fast)
+** Warning: CCU.sv(61): (vopt-13314) Defaulting port 'ccu_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module Cache_Controller_1(fast)
+** Warning: Cache_Controller1.sv(43): (vopt-13314) Defaulting port 'inputs1' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller1.sv(147): (vopt-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Optimizing module Cache_Controller_3(fast)
+** Warning: Cache_Controller3.sv(43): (vopt-13314) Defaulting port 'inputs3' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller3.sv(145): (vopt-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Optimizing module Cache_Controller_0(fast)
+** Warning: Cache_Controller0.sv(43): (vopt-13314) Defaulting port 'inputs' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller0.sv(146): (vopt-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Optimizing module Cache_Controller_2(fast)
+** Warning: Cache_Controller2.sv(43): (vopt-13314) Defaulting port 'inputs2' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: Cache_Controller2.sv(146): (vopt-2182) 'write_done_latched' might be read before written in always_comb or always @* block.
+-- Optimizing module L2_cache(fast)
+** Warning: L2_cache.sv(47): (vopt-13314) Defaulting port 'l2_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: L2_cache.sv(117): (vopt-2182) 'cache' might be read before written in always_comb or always @* block.
+-- Optimizing module arbiter(fast)
+** Warning: arbiter.sv(22): (vopt-13314) Defaulting port 'arbiter_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: arbiter.sv(112): (vopt-2182) 'fifo_hold' might be read before written in always_comb or always @* block.
+-- Optimizing module fifo(fast)
+** Warning: fifo.sv(30): (vopt-13314) Defaulting port 'fifo_input' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module top(fast)
+-- Optimizing interface core_interface(fast__2)
+-- Optimizing interface core_interface(fast)
+Optimized design name is qrun_opt
+End time: 09:46:30 on Feb 22,2025, Elapsed time: 0:00:05
+Errors: 0, Warnings: 19
+# vsim -batch -lib qrun.out/work -do " run -all; exit" -statslog qrun.out/stats_log qrun_opt -appendlog -l qrun.log 
+# Start time: 09:46:30 on Feb 22,2025
+# Loading /tmp/unknown@60bc04618d75_dpi_51/linux_x86_64_gcc-10.3.0/export_tramp.so
+# //  Questa Sim-64
+# //  Version 2024.3_1 linux_x86_64 Oct 17 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.core_interface(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.uvm_pkg_sv_unit(fast)
+# Loading work.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.core_interface(fast__2)
+# Loading work.top_module(fast)
+# Loading work.CCU(fast)
+# Loading work.Cache_Controller_0(fast)
+# Loading work.Cache_Controller_1(fast)
+# Loading work.Cache_Controller_2(fast)
+# Loading work.Cache_Controller_3(fast)
+# Loading work.arbiter(fast)
+# Loading work.fifo(fast)
+# Loading work.L2_cache(fast)
+# Compiling /tmp/unknown@60bc04618d75_dpi_51/linux_x86_64_gcc-10.3.0/exportwrapper.c
+# Loading /tmp/unknown@60bc04618d75_dpi_51/linux_x86_64_gcc-10.3.0/vsim_auto_compile.so
+# 
+# run -all
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test core_test...
+# UVM_INFO scoreboard.sv(217) @ 65: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 81: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 89: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 105: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 105: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 145: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 145: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 169: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 169: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 185: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 185: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 193: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 193: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 193: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 193: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 201: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 201: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 209: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 217: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 217: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 217: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 217: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 225: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 225: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 233: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 241: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 241: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 241: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 241: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 249: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 249: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 257: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 257: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 265: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 265: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 265: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 273: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 273: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 281: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 281: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 289: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 297: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 297: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 305: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 305: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 305: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 305: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 313: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 321: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 321: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 329: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 329: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 329: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 329: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 337: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 337: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 345: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 345: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 353: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 353: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 353: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 353: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 361: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 361: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 369: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 377: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 377: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 377: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 377: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 385: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 385: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 393: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 393: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 401: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 401: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 401: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 409: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 409: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 417: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 417: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 425: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 433: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 433: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 441: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 441: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 441: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 441: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 449: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 457: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 457: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 465: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 465: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 465: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 465: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 473: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 481: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 481: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 489: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 489: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 489: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 489: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 497: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 505: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 505: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 513: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 513: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 513: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 513: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 521: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 529: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 529: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 537: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 537: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 537: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 537: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 545: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 553: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 553: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 561: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 561: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 561: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 561: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 569: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 577: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 577: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 585: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 585: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 585: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 585: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 593: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 601: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 601: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 609: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 609: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 609: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 609: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 617: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 625: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 625: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 633: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 633: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 633: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 633: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 641: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 649: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 649: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 657: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 657: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 657: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 657: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 665: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 673: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 673: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 681: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 681: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 681: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 681: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 689: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 697: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 697: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 705: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 705: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 705: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 705: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 713: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 721: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 721: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 729: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 729: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 729: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 729: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 737: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 745: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 745: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 753: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 753: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 753: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 753: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 761: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 769: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 769: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 777: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 777: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 777: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 777: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 785: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 793: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 793: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 801: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 801: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 801: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 801: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 809: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 817: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 817: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 825: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 825: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 825: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 825: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 833: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 841: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 841: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 849: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 849: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 849: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 849: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 857: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 865: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 865: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 873: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 873: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 873: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 873: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 881: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 889: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 889: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 897: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 897: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 897: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 897: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 905: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 913: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 913: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 921: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 921: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 921: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 921: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 929: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 937: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 937: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 945: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 945: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 945: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 945: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 953: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 961: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 961: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 969: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 969: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 969: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 969: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 977: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 985: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 985: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 993: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 993: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 993: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 993: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1001: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1009: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1009: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1017: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1017: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1017: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1017: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1025: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1033: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1033: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1041: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1041: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1041: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1041: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1049: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1057: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1057: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1065: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1065: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1065: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1065: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1073: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1081: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1081: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1089: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1089: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1089: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1089: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1097: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1105: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1105: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1113: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1113: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1113: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1113: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1121: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1129: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1129: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1137: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1137: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1137: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1137: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1145: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1153: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1153: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1161: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1161: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1161: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1161: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1169: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1177: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1177: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1185: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1185: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1185: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1185: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1193: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1201: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1201: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(217) @ 1209: uvm_test_top.env.scb [COMPARE] Core           0 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(217) @ 1209: uvm_test_top.env.scb [COMPARE] Core           1 Match: 9abcdef0 == 9abcdef0 at address 11111000
+# UVM_INFO scoreboard.sv(271) @ 1209: uvm_test_top.env.scb [COMPARE] Core           2 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO scoreboard.sv(271) @ 1209: uvm_test_top.env.scb [COMPARE] Core           3 Match: data cafebabe wtitten to L2 having address: 11110000
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1270) @ 1215: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 1215: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  316
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COMPARE]   311
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/RELNOTES]     1
+# 
+# ** Note: $finish    : /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 1215 ns  Iteration: 68  Instance: /top
+# End time: 09:46:31 on Feb 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+End time: 09:46:31 on Feb 22,2025, Elapsed time: 0:00:09
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vlog: Errors:   0, Warnings:  27
+    vopt: Errors:   0, Warnings:  19
+    vsim: Errors:   0, Warnings:   0
+  Totals: Errors:   0, Warnings:  46
